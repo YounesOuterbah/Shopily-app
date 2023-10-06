@@ -1,0 +1,44 @@
+.wishlist {
+    padding: 40px 0;
+    .items-wrapper {
+      table.wish-box-table {
+        margin: 0 auto;
+        border-collapse: collapse;
+        width: 100%;
+        th, td {
+          border: 1px solid black;
+          padding: 10px;
+          text-align: left;
+          &:first-child {
+            img {
+              max-width: 100px;
+              height: auto;
+            }
+            span {
+              margin-left: 10px;
+              font-weight: 700;
+            }
+          }
+          &.del span {
+            background: var(--mainGreen);
+            color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .items-wrapper {
+        table.wish-box-table {
+          th, td {
+            display: block;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+  

@@ -1,0 +1,35 @@
+.pagination {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+    justify-content: center;
+
+    .page {
+        padding: 10px;
+        margin: 2px;
+        cursor: pointer;
+        background: white;
+        color: black;
+        border: 1px solid black;
+        transition: .3s;
+
+        &:hover {
+            background-color: black;
+            color: white;
+        }
+    }
+
+
+    .page.active {
+        background-color: black;
+        color: white;
+    }
+
+    .arrow {
+        cursor: pointer;
+    }
+
+    .arrow:disabled{
+        cursor: not-allowed;
+    }
+}

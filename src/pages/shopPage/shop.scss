@@ -1,0 +1,111 @@
+.shop {
+    padding: 40px 0;
+
+    .shop-wrapper {
+        .shop-box-options {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            .options {
+                select {
+                    margin-right: 15px;
+                    margin-bottom: 10px; 
+                    padding: 10px;
+                    border-radius: 6px;
+                }
+            }
+        }
+
+        .shop-box-products {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            margin-top: 20px;
+            gap: 15px;
+
+            @media (max-width: 1200px) {
+                grid-template-columns: repeat(3, 1fr); 
+            }
+
+            @media (max-width: 900px) {
+                grid-template-columns: repeat(2, 1fr); 
+            }
+
+            @media (max-width: 600px) {
+                grid-template-columns: 1fr; 
+            }
+
+            .product-box-shop {
+                border: 1px solid black;
+                border-radius: 6px;
+                padding: 10px;
+                overflow: hidden;
+
+                .img {
+                    position: relative;
+                    transition: 0.3s;
+
+                    &:hover {
+                        transform: scale(1.2);
+                    }
+
+                    .overlay {
+                        position: absolute;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin-top: -10px;
+                        margin-left: -10px;
+                        width: 110%;
+                        height: 110%;
+                        background: #00000025;
+
+                        a {
+                            cursor: pointer;
+                            color: white;
+                            border-radius: 4px;
+                            padding: 5px;
+                            background: black;
+                        }
+                    }
+
+                    img {
+                        width: 100px;
+                        height: 100px;
+                        object-fit: contain;
+                        display: block;
+                        margin: 0 auto;
+                    }
+                }
+
+                .info-box {
+                    display: flex;
+                    justify-content: space-between;
+                    margin-top: 20px;
+
+                    .details {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-end;
+
+                        span {
+                            font-weight: 600;
+                        }
+
+                        .rating {
+                            display: flex;
+                            align-items: center;
+
+                            .icon:not(.icon.person) {
+                                color: gold;
+                            }
+                            .icon.person {
+                                margin-left: 5px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

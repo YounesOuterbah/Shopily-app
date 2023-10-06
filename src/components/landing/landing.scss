@@ -1,0 +1,104 @@
+.landing {
+    background: #f8f8f8;
+    height: calc(100vh - 148px);
+    
+    .container {
+        display: flex;
+
+        .text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            h1 {
+                font-weight: 700;
+                margin-bottom: 20px;
+                font-size: 44px;
+                text-transform: uppercase;
+
+                span {
+                    color: var(--mainGreen);
+                }
+            }
+
+            .desc {
+                margin-bottom: 12px;
+                line-height: 1.4;
+            }
+
+            .btn-shop {
+                display: flex;
+                align-items: center;
+                width: fit-content;
+                margin-top: 10px;
+                background: var(--mainGreen);
+                color: white;
+                box-shadow: -2px 2px 3px -2px #333;
+                cursor: pointer;
+                border: none;
+                padding: 10px 15px;
+                border-radius: 6px;
+                transition: 0.3s;
+
+                &:hover {
+                    background: var(--alphaGreen);
+                }
+
+                .icon {
+                    margin-left: 5px;
+                }
+            }
+        }
+
+        img {
+            width: 450px;
+        }
+    }
+}
+
+@media (max-width:991px) {
+    .landing {
+        padding-top: 10px;
+
+        .container {
+            img {
+                width: 350px;
+            }
+        }
+    }
+}
+
+@media (max-width:767px) {
+
+    .landing {
+         height: 96vh;
+        padding-top: 0;
+
+        .container {
+            flex-direction: column-reverse;
+
+            img {
+                margin: 10px auto;
+                width: 300px;
+                text-align: center;
+            }
+
+            .text {
+                h1 {
+                    font-size: 32px;
+                    margin-top: 10px;
+                }
+
+                p.desc {
+                    font-size: 15px;
+                }
+
+                .btn-shop {
+                    width: 100%;
+                    justify-content: center;
+                    border-radius: 50px;
+                }
+            }
+        }
+    }
+}
