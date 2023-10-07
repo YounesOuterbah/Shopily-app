@@ -1,16 +1,12 @@
 import "./footer.scss";
-import {
-  BsFacebook,
-  BsInstagram,
-  BsTwitter,
-  BsPinterest,
-} from "react-icons/bs";
+import { BsFacebook, BsInstagram, BsTwitter, BsPinterest } from "react-icons/bs";
 
 import applePay from "/imgs/ApplePay.svg";
 import visaPay from "/imgs/visa-logo.svg";
 import masterCard from "/imgs/Mastercard.svg";
 import googleDownload from "/imgs/Google-down.svg";
 import appleDownload from "/imgs/Apple-down.svg";
+import { Link } from "react-router-dom";
 
 export const Footer = () => {
   const data = new Date().getFullYear();
@@ -23,8 +19,8 @@ export const Footer = () => {
             <li>
               <h4>About Shopily</h4>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui
-                vero iure optio eaque deleniti magni!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui vero iure optio eaque
+                deleniti magni!
               </p>
               <div className="contact-us">
                 <p>(213) 658-3916</p>
@@ -36,7 +32,7 @@ export const Footer = () => {
               <h4>Company</h4>
               <p>About</p>
               <p>Features</p>
-              <p>About</p>
+              <p>Contact</p>
             </li>
             <li>
               <h4>Help</h4>
@@ -46,8 +42,12 @@ export const Footer = () => {
             </li>
             <li>
               <h4>My Account</h4>
-              <p>Shoping Cart</p>
-              <p>Favorites Page</p>
+              <Link to={"/cart"}>
+                <p>Shoping Cart</p>
+              </Link>
+              <Link to={"/favorite"}>
+                <p>Favorites Page</p>
+              </Link>
             </li>
             <li>
               <h4>Download Our Mobile App</h4>

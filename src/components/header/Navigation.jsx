@@ -8,6 +8,7 @@ export const Navigation = () => {
     <>
       <div className="navigation">
         <div className="container">
+          {toggleMenu && <div className="overlay"></div>}
           <AiOutlineMenu className="menu" onClick={() => setToggleMenu(true)} />
           <ul
             className="links"
@@ -16,10 +17,10 @@ export const Navigation = () => {
             <li className="close" onClick={() => setToggleMenu(false)}>
               X
             </li>
-            <li>
+            <li onClick={() => setToggleMenu(false)}>
               <Link to="/">Home</Link>
             </li>
-            <li>
+            <li onClick={() => setToggleMenu(false)}>
               <Link to="/shop">Shop</Link>
             </li>
           </ul>
