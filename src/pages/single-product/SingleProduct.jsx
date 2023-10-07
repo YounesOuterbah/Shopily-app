@@ -5,6 +5,8 @@ import ReactImageMagnify from "react-image-magnify";
 import "./single-product.scss";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../../redux/slices/cartSlice";
+import { addToWISH_List } from "../../redux/slices/favSlice";
+import { Spinner } from "../../components/spinner/Spinner";
 
 export const SingleProduct = () => {
   const { id } = useParams();
@@ -28,7 +30,7 @@ export const SingleProduct = () => {
   }, [id]);
 
   if (!product) {
-    return <div>Loading...</div>;
+    return <Spinner/>;
   }
 
   return (
@@ -65,10 +67,7 @@ export const SingleProduct = () => {
           <p className="desc">{product.description}</p>
           <div className="btns">
             <div className="qty">
-              <button
-                className="controls"
-                onClick={() => qty != 1 && setQty(qty - 1)}
-              >
+              <button className="controls" onClick={() => qty != 1 && setQty(qty - 1)}>
                 -
               </button>
               <input
@@ -101,7 +100,21 @@ export const SingleProduct = () => {
                 Add to Cart
               </button>
             </div>
-            <div className="fav" onClick={() => setFavClicked(!favClicked)}>
+            <div
+              className="fav"
+              onClick={() => (
+                setFavClicked(!favClicked),
+                dispatch(
+                  addToWISH_List({
+                    id: product.id,
+                    title: product.title,
+                    price: product.price,
+                    quantity: qty,
+                    image: product.image,
+                  })
+                )
+              )}
+            >
               {favClicked ? (
                 <AiFillHeart className="icon filled" />
               ) : (

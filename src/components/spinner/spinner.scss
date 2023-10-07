@@ -1,0 +1,30 @@
+.spinner {
+    height: calc(100vh - 145px);
+
+    .container {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .spinner-rotation {
+            width: 10px;
+            height: 10px;
+            background: var(--mainGreen);
+            border-radius: 50%;
+            position: absolute;
+            animation: spin 0.3s linear infinite;
+            opacity: 0;
+        }
+    }
+}
+
+@keyframes spin {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}

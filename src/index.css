@@ -9,12 +9,20 @@
   box-sizing: border-box;
   margin: 0;
   font-family: "Rubik", sans-serif;
-  /* border: 1px solid red; */
 }
 
 #root {
   position: relative;
   overflow: hidden;
+}
+
+::-webkit-scrollbar{
+  width: 5px;
+  background-color: var(--mainGreen);
+}
+
+::-webkit-scrollbar-thumb{
+  background-color: green;
 }
 
 ul {

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./landing.scss";
 import landingImg from "/imgs/Bookshop-bro.svg";
 import { BsArrowRight } from "react-icons/bs";
@@ -18,9 +19,9 @@ export const Landing = () => {
               shopping right to your fingertips, making it easier than ever to
               find and purchase the things you love.
             </p>
-            <button className="btn-shop">
+            <Link to={"/shop"} className="btn-shop">
               Shop Now <BsArrowRight className="icon" />
-            </button>
+            </Link>
           </div>
           <img src={landingImg} alt="" />
         </div>

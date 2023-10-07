@@ -47,14 +47,44 @@
                 position: relative;
                 height: 200px;
 
-                .icon.fav {
-                    position: absolute;
-                    font-size: 26px;
-                    cursor: pointer;
+
+                .icon-heart {
+                    position: relative;
                     transition: 0.3s;
 
-                    &:hover {
-                        color: crimson;
+                    &:hover::before {
+                        position: absolute;
+                        content: "add to wishlist";
+                        z-index: 44;
+                        width: fit-content;
+                        padding: 5px;
+                        border-radius: 5px;
+                        background: black;
+                        color: white;
+                        top: -35px;
+                        left: -45px;
+                    }
+
+                    &:hover::after {
+                        content: "";
+                        border-width: 10px;
+                        border-style: solid;
+                        z-index: 44;
+                        border-color: black transparent transparent transparent;
+                        position: absolute;
+                        top: -8px;
+                        left: 3px;
+                    }
+
+                    .icon.fav {
+                        position: absolute;
+                        font-size: 26px;
+                        cursor: pointer;
+                        transition: 0.3s;
+
+                        &:hover {
+                            color: crimson;
+                        }
                     }
                 }
 
@@ -103,9 +133,11 @@
                         font-size: 22px;
                         cursor: pointer;
                     }
-                    .cart{
+
+                    .cart {
                         transition: 0.3s;
-                        &:hover{
+
+                        &:hover {
                             color: var(--mainGreen);
                         }
                     }

@@ -24,27 +24,28 @@ export const ProductBox = ({ products }) => {
 
   return (
     <>
-      <ToastContainer/>
+      <ToastContainer />
       {products.map((product) => (
         <div className="product-box" key={product.id}>
-          <AiFillHeart
-            onClick={() => (
-              handleHeartClick(product.id),
-              dispatch(
-                addToWISH_List({
-                  id: product.id,
-                  title: product.title,
-                  price: product.price,
-                  image: product.image,
+          <div className="icon-heart">
+            <AiFillHeart
+              onClick={() => (
+                handleHeartClick(product.id),
+                dispatch(
+                  addToWISH_List({
+                    id: product.id,
+                    title: product.title,
+                    price: product.price,
+                    image: product.image,
+                  })
+                ),
+                toast.success("Product successfully added to your wishlist", {
+                  type: "dark",
                 })
-              )
-            ,toast.success("Product successfully added to your wishlist",{
-              type:"dark"
-            }))}
-            className={`icon fav ${
-              likedProducts.includes(product.id) ? "active" : ""
-            }`}
-          />
+              )}
+              className={`icon fav ${likedProducts.includes(product.id) ? "active" : ""}`}
+            />
+          </div>
           <Link to={`/single-product/${product.id}`}>
             <img src={product.image} alt={product.title} />
           </Link>
@@ -70,9 +71,7 @@ export const ProductBox = ({ products }) => {
                       image: product.image,
                     })
                   );
-                  toast.success(
-                    `Product successfully added to your shopping cart`
-                  );
+                  toast.success(`Product successfully added to your shopping cart`);
                 }}
                 className="icon"
               />
