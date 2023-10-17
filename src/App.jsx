@@ -14,11 +14,10 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/shop" element={<Shop />} />
-          <Route path="/favorite" element={<Favorite />} />
-          <Route path="/cart" element={<Cart />} />
-          <Route path="/shop" element={<Shop />} />
-          <Route path="/single-product/:id" element={<SingleProduct />} />
+          <Route path="shop" element={<Shop />} />
+          <Route path="favorite" element={<Favorite />} />
+          <Route path="cart" element={<Cart />} />
+          <Route path="single-product/:id" element={<SingleProduct />} />
         </Routes>
         <Footer />
       </Router>
