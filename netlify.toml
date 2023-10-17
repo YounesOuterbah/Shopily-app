@@ -1,4 +1,4 @@
 [[redirects]]
-from = "/*"
-to = "/"
-status = 200
+  from = "https://shopily-app.netlify.app/*"
+  to = "https://shopily-app.netlify.app"
+  status = 200
