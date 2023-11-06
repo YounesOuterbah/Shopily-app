@@ -10,7 +10,7 @@
             .options {
                 select {
                     margin-right: 15px;
-                    margin-bottom: 10px; 
+                    margin-bottom: 10px;
                     padding: 10px;
                     border-radius: 6px;
                 }
@@ -24,15 +24,15 @@
             gap: 15px;
 
             @media (max-width: 1200px) {
-                grid-template-columns: repeat(3, 1fr); 
+                grid-template-columns: repeat(3, 1fr);
             }
 
             @media (max-width: 900px) {
-                grid-template-columns: repeat(2, 1fr); 
+                grid-template-columns: repeat(2, 1fr);
             }
 
             @media (max-width: 600px) {
-                grid-template-columns: 1fr; 
+                grid-template-columns: 1fr;
             }
 
             .product-box-shop {
@@ -99,6 +99,7 @@
                             .icon:not(.icon.person) {
                                 color: gold;
                             }
+
                             .icon.person {
                                 margin-left: 5px;
                             }
