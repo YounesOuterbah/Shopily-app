@@ -4,6 +4,12 @@
     padding-bottom: 100px;
 
     .container {
+        h1.title {
+            margin-top: 20px;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
         ul.product-list {
             display: flex;
             justify-content: space-evenly;
