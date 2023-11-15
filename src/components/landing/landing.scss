@@ -1,9 +1,10 @@
 .landing {
     background: #f8f8f8;
     height: calc(100vh - 148px);
-    
+
     .container {
         display: flex;
+        height: 100%;
 
         .text {
             display: flex;
@@ -71,7 +72,7 @@
 @media (max-width:767px) {
 
     .landing {
-         height: 96vh;
+        height: 96vh;
         padding-top: 0;
 
         .container {
